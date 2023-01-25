@@ -30,7 +30,12 @@ class PostResource extends Resource
                 ->columnSpan(1),
                 Components\MarkdownEditor::make('body')
                 ->columnSpanFull(2),
-                CuratorPicker::make('featured_image')
+                CuratorPicker::make('featured_image'),
+                Components\Repeater::make('featured_images')
+                ->schema([
+                    CuratorPicker::make('image'),
+                ])
+                ->columns(2)
             ]);
     }
 

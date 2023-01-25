@@ -20,6 +20,9 @@ return new class extends Migration
             $table->timestamps();
             
             $table->string('featured_image')->nullable();
+
+            $table->jsonb('featured_images')->nullable();
+
         });
     }
 
